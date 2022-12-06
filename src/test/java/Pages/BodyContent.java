@@ -91,6 +91,9 @@ public class BodyContent extends Parent{
 
     @FindBy(css=".ui-sortable td>span")
     private WebElement searchResults;
+
+    @FindBy(css="i[class='fa fa-edit']")
+    private WebElement editButton;
     WebElement myElement;
     public void findAndSend(String strElement, String value){  // 2.aşama
         // burda string isimden weblemente ulaşıcam
@@ -135,6 +138,7 @@ public class BodyContent extends Parent{
             case "uploadImageButton" : myElement =uploadImageButton; break;
             case "loginButton" : myElement =loginButton; break;
             case "productSumbitButton" : myElement =productSumbitButton; break;
+            case "editButton" : myElement =editButton; break;
         }
 
         clickFunction(myElement);
