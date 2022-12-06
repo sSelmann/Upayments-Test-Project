@@ -18,8 +18,7 @@ public class LeftNavConent extends Parent {
     private WebElement productsUnderStoreLeftNav;
 
     WebElement myElement;
-    public void findAndClick(String strElement){  // 2.aşama
-        // burda string isimden weblemente ulaşıcam
+    public void findAndClick(String strElement){
         switch (strElement)
         {
             case "storeLeftNav" : myElement =storeLeftNav; break;

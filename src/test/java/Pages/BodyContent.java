@@ -86,7 +86,11 @@ public class BodyContent extends Parent{
     @FindBy(css="div[class='toast-message']")
     private WebElement successMessage;
 
+    @FindBy(name="product_name_en")
+    private WebElement productNameInput;
 
+    @FindBy(css=".ui-sortable td>span")
+    private WebElement searchResults;
     WebElement myElement;
     public void findAndSend(String strElement, String value){  // 2.aşama
         // burda string isimden weblemente ulaşıcam
@@ -107,6 +111,7 @@ public class BodyContent extends Parent{
             case "itemCode" : myElement =itemCode; break;
             case "productQuantity" : myElement =productQuantity; break;
             case "dailyQuantityLimit" : myElement =dailyQuantityLimit; break;
+            case "productNameInput" : myElement =productNameInput; break;
         }
 
         sendKeysFunction(myElement, value);
@@ -160,6 +165,7 @@ public class BodyContent extends Parent{
         switch (strElement)
         {
             case "successMessage" : myElement =successMessage; break;
+            case "searchResults" : myElement =searchResults; break;
         }
 
         verifyContainsText(myElement,text);

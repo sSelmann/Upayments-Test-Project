@@ -1,4 +1,4 @@
-Feature: Products Functionality
+Feature: Products Add Functionality
 
   Scenario: Add Products
 
