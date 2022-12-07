@@ -18,7 +18,7 @@ public class BodyContent extends Parent{
     private WebElement passwordInput;
 
     @FindBy(css="[class='actions'] a:nth-child(2)")
-    private WebElement addProductButton;
+    public static WebElement addProductButton;
 
     @FindBy(css="div[class*='uploaded-image']")
     private WebElement uploadImageButton;
@@ -94,6 +94,9 @@ public class BodyContent extends Parent{
 
     @FindBy(css="i[class='fa fa-edit']")
     private WebElement editButton;
+
+    @FindBy(css="i[class='fa fa-trash']")
+    private WebElement deleteButton;
     WebElement myElement;
     public void findAndSend(String strElement, String value){  // 2.aşama
         // burda string isimden weblemente ulaşıcam
@@ -139,6 +142,7 @@ public class BodyContent extends Parent{
             case "loginButton" : myElement =loginButton; break;
             case "productSumbitButton" : myElement =productSumbitButton; break;
             case "editButton" : myElement =editButton; break;
+            case "deleteButton" : myElement =deleteButton; break;
         }
 
         clickFunction(myElement);

@@ -40,6 +40,11 @@ public class Parent{
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    public void waitInvisibility(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.invisibilityOf(element));
+    }
+
     public void scrollToElement(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
         js.executeScript("arguments[0].scrollIntoView();", element);

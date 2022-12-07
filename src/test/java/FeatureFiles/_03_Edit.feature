@@ -23,7 +23,7 @@ Feature: Product Search Functionality
       | productSumbitButton |
     Then Success message should be displayed
       | successMessage | success |
-
+    And logout
 
 
 

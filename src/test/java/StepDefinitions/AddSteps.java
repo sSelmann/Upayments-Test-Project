@@ -1,6 +1,7 @@
 package StepDefinitions;
 
 import Pages.BodyContent;
+import Pages.HeaderContent;
 import Pages.LeftNavConent;
 import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
@@ -8,12 +9,15 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.JavascriptExecutor;
 
 import java.util.List;
 
 public class AddSteps {
     BodyContent bc=new BodyContent();
     LeftNavConent lnc=new LeftNavConent();
+
+    HeaderContent hc=new HeaderContent();
 
     @Given("Navigate to Upayments")
     public void navigateToBasqar() {
@@ -92,5 +96,28 @@ public class AddSteps {
 
         for(int i=0;i<listElement.size();i++)
             bc.findAndContainsText(listElement.get(i).get(0), listElement.get(i).get(1));
+    }
+
+    @And("logout")
+    public void logout() {
+
+        hc.waitInvisibility(HeaderContent.successMessage);
+        hc.findAndClick("userDDMenu");
+        hc.findAndClick("userDDMenu");
+        hc.findAndClick("logOutButton");
+
+    }
+
+    @And("Click Add Product Button in the Body Content")
+    public void clickAddProductButtonInTheBodyContent(DataTable elements) {
+        JavascriptExecutor js=(JavascriptExecutor)  GWD.getDriver();
+        js.executeScript("window.scrollBy(0,50)");
+        bc.waitUntilVisible(BodyContent.addProductButton);
+        List<String> listElement = elements.asList(String.class);
+
+        for(int i=0;i<listElement.size();i++) {
+            bc.findAndClick(listElement.get(i));
+        }
+
     }
 }

@@ -15,7 +15,7 @@ Feature: Product Search Functionality
     | productNameInput | Empty Box |
     Then Verify search results
     | searchResults | Empty Box |
-
+    And logout
 
 
 

@@ -11,7 +11,7 @@ Feature: Products Add Functionality
     Then Click on the element in the Left Nav Content
       | storeLeftNav              |
       | productsUnderStoreLeftNav |
-    And Click on the element in the Body Content
+    And Click Add Product Button in the Body Content
       | addProductButton |
     Then Upload product image
       | uploadImageButton | C:\Users\yusuf\Desktop\box.png |
@@ -45,5 +45,6 @@ Feature: Products Add Functionality
       | productSumbitButton |
     Then Success message should be displayed
       | successMessage | success |
+    And logout
 
 

@@ -15,13 +15,13 @@ Feature: Product Search Functionality
       | productNameInput | Empty Box |
     And Verify search results
       | searchResults | Empty Box |
-    Then Click on the element in the Body Content
+    Then Click Delete Button in the Body Content
       | deleteButton |
     And Click on the element in the Dialog Content
     | okButton |
     Then Success message should be displayed
       | successMessage | success |
-
+    And logout
 
 
 
