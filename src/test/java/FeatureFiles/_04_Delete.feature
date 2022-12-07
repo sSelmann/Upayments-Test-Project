@@ -1,6 +1,6 @@
 Feature: Product Search Functionality
 
-  Scenario: Search Products
+  Scenario: Delete Products
 
     Given Navigate to Upayments
     When Send on the element in the Body Content

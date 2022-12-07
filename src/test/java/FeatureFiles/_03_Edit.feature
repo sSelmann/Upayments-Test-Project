@@ -1,6 +1,6 @@
 Feature: Product Search Functionality
 
-  Scenario: Search Products
+  Scenario: Edit Products
 
     Given Navigate to Upayments
     When Send on the element in the Body Content
@@ -15,7 +15,7 @@ Feature: Product Search Functionality
       | productNameInput | Empty Box |
     Then Verify search results
       | searchResults | Empty Box |
-    And Click on the element in the Body Content
+    And Click Edit Button in the Body Content
       | editButton |
     Then Send on the element in the Body Content
       | productPrice | 200 |
