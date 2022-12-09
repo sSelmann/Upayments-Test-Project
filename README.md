@@ -1,6 +1,6 @@
-The project where 4 test scenarios created for Upayments were tested.
+The project where 4 test user stories created for Upayments were tested.
 
-Cases created for 4 scenarios:
+Cases created for 4 user stories:
 
 **Case 1** - Verify Add Product functionality with valid username & password
 |Step                          |Test Data| Expected Result| Actual Result|Status|
